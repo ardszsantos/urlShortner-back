@@ -9,7 +9,7 @@
    - Clone o repositório para sua máquina local.
    ```bash
    git clone https://github.com/seu-usuario/url-shortner
-   cd urk-shortner
+   cd url-shortner
    ```
 
 3. **Crie uma Nova Branch**:
