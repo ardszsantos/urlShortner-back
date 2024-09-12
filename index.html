@@ -1,13 +1,16 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
-  <title>URL shortner</title>
-  
+  <link
+    href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+    rel="stylesheet">
+  <title>URL shortener</title>
+
   <style>
     * {
       box-sizing: border-box;
@@ -39,6 +42,7 @@
       border: 1px solid black;
       border-radius: 7px;
     }
+
     #buttonSubmit:hover {
       background-color: #2c2c24;
       transform: scale(1.1);
@@ -51,20 +55,24 @@
     #resultDiv a {
       text-decoration: none;
     }
-
   </style>
 </head>
-<body>
-<div class="wrapper">
-  <h1>Paste the url below to shorten it!</h1>
-  
-  <div class="urlShortner">
-    <input type="text" id="urlInput" required placeholder="Enter the link here">
-    <button id="buttonSubmit" onclick="shortenUrl()">Shorten URL</button>
-    <div id="resultDiv"></div>
-  </div>
-</div>
 
-<script src="script.js"></script>
+<body>
+  <div class="wrapper">
+    <h1>Paste the url below to shorten it!</h1>
+
+    <div class="urlShortner">
+      <!-- Formulário que envia para shorthen.php via POST -->
+      <form action="shorthen.php" method="POST">
+        <input type="url" name="longUrl" id="urlInput" required placeholder="Enter the link here">
+        <button id="buttonSubmit" type="submit">Shorten URL</button>
+      </form>
+      <div id="resultDiv"></div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
 </body>
+
 </html>
