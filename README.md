@@ -1,15 +1,19 @@
-# 🌐 URL Shortener
+# 🌐 URL Shortener Back-End
 
-Um simples encurtador de URLs feito com **NestJS**, **MySQL** (hospedado no [Aiven](https://aiven.io/)) e **TypeORM**. 
+A simple URL shortener service built using **NestJS**, **MySQL** (hosted on [Aiven](https://aiven.io/)), and **TypeORM**.
 
-## Funcionalidades
+## Features
 
-- Encurtamento de URLs
-- Salvamento e gerenciamento das URLs encurtadas no banco de dados MySQL
-- Interface simples para copiar as URLs curtas
+- Shortens long URLs
+- Stores and manages URLs in a MySQL database
+- Provides a simple API for integration
 
-## Tecnologias Utilizadas
+## Technologies Used
 
 - **NestJS**
 - **TypeORM**
 - **MySQL** (Aiven)
+
+## Deployment
+
+The back-end is hosted on [Render](https://render.com/), providing the API endpoints consumed by the front-end.
