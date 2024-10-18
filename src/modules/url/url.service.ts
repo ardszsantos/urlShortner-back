@@ -11,7 +11,7 @@ export class UrlService {
   async shortenUrl(createUrlDto: CreateUrlDto): Promise<string> {
     const { longUrl } = createUrlDto;
     const urlCode = this.generateCode();
-    const shortUrl = `http://localhost:3000/url/${urlCode}`;
+    const shortUrl = `${process.env.BASE_URL}/url/${urlCode}`;
 
     const url = this.urlRepository.create({
       longUrl,
